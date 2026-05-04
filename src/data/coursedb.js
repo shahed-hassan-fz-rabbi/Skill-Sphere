@@ -9,6 +9,7 @@ export const coursedb = [
     description: "Learn full-stack web development from scratch.",
     image:"https://web.programming-hero.com/home/_next/image?url=%2Fhome%2Fhome2%2Fbanner-thumbnail.jpg&w=3840&q=75",
     category: "Development",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const coursedb = [
     description: "Design modern and user-friendly interfaces.",
     image: "https://helloskillio.com/wp-content/uploads/2025/03/UI-UX-Classes.jpg",
     category: "Design",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const coursedb = [
     description: "Learn SEO, ads, and social media marketing.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJIsDTzYj1cyOjw17o3saRqD3FOZ2ewNZhFA&s",
     category: "Marketing",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const coursedb = [
     description: "Build modern web apps using React.",
     image: "https://media.licdn.com/dms/image/v2/C4E12AQFdVr18zUa17Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624637761724?e=2147483647&v=beta&t=uOrqjZV7ZeSvE6euFcZVEuj-2yuec1FppjnE6IUYdzY",
     category: "Development",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const coursedb = [
     description: "Learn Photoshop and Illustrator basics.",
     image: "https://www.creativeitinstitute.com/images/course/course_1765715961.jpg",
     category: "Design",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
   {
     id: 6,
@@ -64,5 +69,6 @@ export const coursedb = [
     description: "Deep dive into JavaScript concepts.",
     image: "https://dtmvamahs40ux.cloudfront.net/public/seo-image/seo-image-3005-javascript-course.webp",
     category: "Development",
+    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
   },
 ];
