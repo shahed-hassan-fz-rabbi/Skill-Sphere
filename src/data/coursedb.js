@@ -9,7 +9,7 @@ export const coursedb = [
     description: "Learn full-stack web development from scratch.",
     image:"https://web.programming-hero.com/home/_next/image?url=%2Fhome%2Fhome2%2Fbanner-thumbnail.jpg&w=3840&q=75",
     category: "Development",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4=",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const coursedb = [
     description: "Design modern and user-friendly interfaces.",
     image: "https://helloskillio.com/wp-content/uploads/2025/03/UI-UX-Classes.jpg",
     category: "Design",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://img.freepik.com/premium-photo/modern-business-man-formal-suit-standing-with-crossed-arms-isolated-grey-background-businesspeople-concept_533057-1641.jpg",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const coursedb = [
     description: "Learn SEO, ads, and social media marketing.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJIsDTzYj1cyOjw17o3saRqD3FOZ2ewNZhFA&s",
     category: "Marketing",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://static.vecteezy.com/system/resources/thumbnails/033/129/417/small/a-business-man-stands-against-white-background-with-his-arms-crossed-ai-generative-photo.jpg",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const coursedb = [
     description: "Build modern web apps using React.",
     image: "https://media.licdn.com/dms/image/v2/C4E12AQFdVr18zUa17Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624637761724?e=2147483647&v=beta&t=uOrqjZV7ZeSvE6euFcZVEuj-2yuec1FppjnE6IUYdzY",
     category: "Development",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://as1.ftcdn.net/jpg/01/45/12/66/1000_F_145126694_RDl1ZhYdqPL45vI0XLMBtQqdTjdgu9IB.jpg",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const coursedb = [
     description: "Learn Photoshop and Illustrator basics.",
     image: "https://www.creativeitinstitute.com/images/course/course_1765715961.jpg",
     category: "Design",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://thumbs.dreamstime.com/b/businessman-stand-urban-background-confident-man-formal-wear-outdoor-my-city-male-grooming-ceo-barbershop-141229701.jpg",
   },
   {
     id: 6,
@@ -69,6 +69,6 @@ export const coursedb = [
     description: "Deep dive into JavaScript concepts.",
     image: "https://dtmvamahs40ux.cloudfront.net/public/seo-image/seo-image-3005-javascript-course.webp",
     category: "Development",
-    instructorImage: "https://i.postimg.cc/3wZz8ZsM/john.jpg",
+    instructorImage: "https://img.freepik.com/free-photo/business-man-front-office-building_23-2148018578.jpg?semt=ais_hybrid&w=740&q=80",
   },
 ];

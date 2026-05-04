@@ -83,9 +83,7 @@ const TopInstructors = () => {
                   📚 {inst.count} {inst.count === 1 ? "Course" : "Courses"}
                 </p>
 
-                <button className="btn btn-primary btn-sm btn-outline mt-3 w-full">
-                  View Profile
-                </button>
+               <button className="btn bg-[#007bff] hover:bg-[#0056b3] text-white btn-sm">View Details</button>
               </div>
             </div>
           ))}

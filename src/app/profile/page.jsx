@@ -18,7 +18,7 @@ export default function ProfilePage() {
   if (isPending) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-spinner loading-lg text-primary"></span>
+        <span className="loading loading-spinner loading-lg text-[#53cbfe]"></span>
       </div>
     );
   }
@@ -31,7 +31,7 @@ export default function ProfilePage() {
         <div className="card-body items-center text-center gap-4">
           {/* Avatar */}
           <div className="avatar">
-            <div className="w-28 rounded-full ring ring-primary ring-offset-2">
+            <div className="w-28 rounded-full ring ring-[#53cbfe] ring-offset-2">
               <img
                 src={user.image || "https://i.pravatar.cc/200"}
                 alt={user.name}
@@ -39,37 +39,37 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Info */}
+          
           <div>
             <h2 className="text-2xl font-bold">{user.name}</h2>
             <p className="text-base-content/60 mt-1">{user.email}</p>
           </div>
 
-          <div className="badge badge-primary badge-outline">Student</div>
+          <div className="badge text-[#53cbfe] badge-outline">Student</div>
 
           <div className="divider"></div>
 
-          {/* Stats */}
+         
           <div className="grid grid-cols-3 gap-4 w-full">
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">0</p>
+              <p className="text-2xl font-bold text-[#53cbfe]">0</p>
               <p className="text-xs text-base-content/60">Enrolled</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">0</p>
+              <p className="text-2xl font-bold text-[#53cbfe]">0</p>
               <p className="text-xs text-base-content/60">Completed</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">0</p>
+              <p className="text-2xl font-bold text-[#53cbfe]">0</p>
               <p className="text-xs text-base-content/60">Certificates</p>
             </div>
           </div>
 
           <div className="divider"></div>
 
-          {/* Update Button */}
-          <Link href="/profile/update" className="btn btn-primary w-full">
-            ✏️ Update Profile
+         
+          <Link href="/profile/update" className="btn bg-[#53cbfe] hover:bg-[#b3d6fc] text-white  w-full">
+            Update Profile
           </Link>
         </div>
       </div>

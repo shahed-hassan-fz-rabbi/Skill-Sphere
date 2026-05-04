@@ -79,7 +79,9 @@ export default function NavBar() {
         </ul>
       </div>
 
-      {/* DESKTOP MENU */}
+      
+
+      
       <div className="hidden lg:flex items-center gap-3">
 
         <Link href="/" className={linkClass("/")}>

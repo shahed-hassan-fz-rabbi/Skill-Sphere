@@ -12,9 +12,9 @@ const curriculum = [
 export default function CourseDetailsCard({ course }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      {/* Left - Main Info */}
+      
       <div className="lg:col-span-2 space-y-6">
-        {/* Hero Image */}
+       
         <div className="rounded-2xl overflow-hidden shadow-lg">
           <img
             src={course.image}
@@ -23,9 +23,9 @@ export default function CourseDetailsCard({ course }) {
           />
         </div>
 
-        {/* Title & Meta */}
+        
         <div>
-          <span className="badge badge-primary badge-outline mb-2">
+          <span className="badge text-[#53cbfe] badge-outline mb-2">
             {course.category}
           </span>
           <h1 className="text-3xl font-bold text-base-content mb-3">
@@ -36,10 +36,10 @@ export default function CourseDetailsCard({ course }) {
           </p>
         </div>
 
-        {/* Stats Row */}
+        
         <div className="flex flex-wrap gap-6 text-sm text-base-content/80">
           <div className="flex items-center gap-2">
-            <FaUser className="text-primary" />
+            <FaUser className="text-[#53cbfe]" />
             <span>{course.instructor}</span>
           </div>
           <div className="flex items-center gap-2">
@@ -47,11 +47,11 @@ export default function CourseDetailsCard({ course }) {
             <span>{course.rating} / 5.0</span>
           </div>
           <div className="flex items-center gap-2">
-            <FaClock className="text-primary" />
+            <FaClock className="text-[#53cbfe]" />
             <span>{course.duration}</span>
           </div>
           <div className="flex items-center gap-2">
-            <FaLayerGroup className="text-primary" />
+            <FaLayerGroup className="text-[#53cbfe]" />
             <span>{course.level}</span>
           </div>
         </div>
@@ -76,21 +76,22 @@ export default function CourseDetailsCard({ course }) {
       <div className="lg:col-span-1">
         <div className="sticky top-24 card bg-base-100 shadow-2xl border border-base-300">
           <div className="card-body space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Free Enrollment</h3>
+            <h3 className="text-2xl font-bold text-[#53cbfe]">Free Enrollment</h3>
             <p className="text-base-content/60 text-sm">
               Get full lifetime access to this course.
             </p>
-            <button className="btn btn-primary w-full text-lg">
+            <button className="btn bg-[#53cbfe] hover:bg-[#b3d6fc] text-white w-full text-lg">
               Enroll Now 🚀
             </button>
             <div className="divider">What you'll get</div>
-            <ul className="space-y-2 text-sm text-base-content/70">
-              <li>✅ Full course access</li>
-              <li>✅ Downloadable resources</li>
-              <li>✅ Certificate of completion</li>
-              <li>✅ Community support</li>
-              <li>✅ Lifetime updates</li>
+            <ul className="list-disc list-inside text-base-content/80 space-y-2">
+                <li>Comprehensive video lessons</li>
+                <li>Downloadable resources</li>
+                <li>Certificate of completion</li>
+                <li>Access to community forums</li>
+                <li>Real-world projects</li>
             </ul>
+           
           </div>
         </div>
       </div>
