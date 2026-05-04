@@ -34,9 +34,7 @@ const PopularCourses = () => {
 
               <div className="card-actions justify-end">
                 <Link href={`/courses/${course.id}`}>
-                  <button className="btn btn-primary btn-sm">
-                    View Details
-                  </button>
+                  <button className="btn bg-[#007bff] hover:bg-[#0056b3] text-white btn-sm">View Details</button>
                 </Link>
               </div>
             </div>

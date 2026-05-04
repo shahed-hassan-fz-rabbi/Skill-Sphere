@@ -33,7 +33,7 @@ export default function CourseCard({ course }) {
         <div className="flex justify-between items-center mt-2">
           <span className="badge badge-ghost badge-sm">{course.level}</span>
           <Link href={`/courses/${course.id}`}>
-            <button className="btn btn-primary btn-sm">View Details</button>
+            <button className="btn bg-[#007bff] hover:bg-[#0056b3] text-white btn-sm">View Details</button>
           </Link>
         </div>
       </div>

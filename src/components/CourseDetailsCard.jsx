@@ -56,7 +56,7 @@ export default function CourseDetailsCard({ course }) {
           </div>
         </div>
 
-        {/* Curriculum */}
+       
         <div className="bg-base-200 rounded-2xl p-6">
           <h2 className="text-xl font-bold mb-4">Course Curriculum</h2>
           <ul className="space-y-3">
@@ -72,7 +72,7 @@ export default function CourseDetailsCard({ course }) {
         </div>
       </div>
 
-      {/* Right - Enrollment Card */}
+     
       <div className="lg:col-span-1">
         <div className="sticky top-24 card bg-base-100 shadow-2xl border border-base-300">
           <div className="card-body space-y-4">

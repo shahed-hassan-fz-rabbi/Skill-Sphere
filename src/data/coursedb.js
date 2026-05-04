@@ -7,7 +7,7 @@ export const coursedb = [
     rating: 4.8,
     level: "Beginner",
     description: "Learn full-stack web development from scratch.",
-    image: "https://i.postimg.cc/8Cz8k6qT/web.jpg",
+    image:"https://web.programming-hero.com/home/_next/image?url=%2Fhome%2Fhome2%2Fbanner-thumbnail.jpg&w=3840&q=75",
     category: "Development",
   },
   {
@@ -18,7 +18,7 @@ export const coursedb = [
     rating: 4.7,
     level: "Intermediate",
     description: "Design modern and user-friendly interfaces.",
-    image: "https://i.postimg.cc/wxqvTn5F/uiux.jpg",
+    image: "https://helloskillio.com/wp-content/uploads/2025/03/UI-UX-Classes.jpg",
     category: "Design",
   },
   {
@@ -29,7 +29,7 @@ export const coursedb = [
     rating: 4.6,
     level: "Beginner",
     description: "Learn SEO, ads, and social media marketing.",
-    image: "https://i.postimg.cc/7Z7z3y7Y/marketing.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJIsDTzYj1cyOjw17o3saRqD3FOZ2ewNZhFA&s",
     category: "Marketing",
   },
   {
@@ -40,7 +40,7 @@ export const coursedb = [
     rating: 4.9,
     level: "Beginner",
     description: "Build modern web apps using React.",
-    image: "https://i.postimg.cc/d0r6zJ7g/react.jpg",
+    image: "https://media.licdn.com/dms/image/v2/C4E12AQFdVr18zUa17Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624637761724?e=2147483647&v=beta&t=uOrqjZV7ZeSvE6euFcZVEuj-2yuec1FppjnE6IUYdzY",
     category: "Development",
   },
   {
@@ -51,7 +51,7 @@ export const coursedb = [
     rating: 4.5,
     level: "Beginner",
     description: "Learn Photoshop and Illustrator basics.",
-    image: "https://i.postimg.cc/V6zj3d7T/design.jpg",
+    image: "https://www.creativeitinstitute.com/images/course/course_1765715961.jpg",
     category: "Design",
   },
   {
@@ -62,7 +62,7 @@ export const coursedb = [
     rating: 4.8,
     level: "Advanced",
     description: "Deep dive into JavaScript concepts.",
-    image: "https://i.postimg.cc/2y1z5gJ9/js.jpg",
+    image: "https://dtmvamahs40ux.cloudfront.net/public/seo-image/seo-image-3005-javascript-course.webp",
     category: "Development",
   },
 ];

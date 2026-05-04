@@ -10,51 +10,70 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+    <footer className="bg-base-200 text-base-content">
 
-      {/* Brand */}
-      <aside>
-        <h2 className="text-2xl font-bold text-primary">SkillSphere</h2>
-        <p className="mt-2">
-          Learn from experts <br />
-          Upgrade your skills 
-        </p>
-      </aside>
+      {/* TOP SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-10 grid gap-8 
+                      sm:grid-cols-2 md:grid-cols-4">
 
-      {/* Contact */}
-      <nav>
-        <h6 className="footer-title">Contact</h6>
-        <a className="flex items-center gap-2">
-          <FaEnvelope /> support@skillsphere.com
-        </a>
-        <a className="flex items-center gap-2">
-          <FaPhone /> +880 1234-567890
-        </a>
-        <a className="flex items-center gap-2">
-          <FaMapMarkerAlt /> Bangladesh
-        </a>
-      </nav>
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold text-[#1babf9]">
+            SkillSphere
+          </h2>
+          <p className="mt-2 text-sm">
+            Learn from experts <br />
+            Upgrade your skills
+          </p>
+        </div>
 
-      {/* Social */}
-      <nav>
-        <h6 className="footer-title">Social</h6>
-        <a className="flex items-center gap-2 hover:text-primary">
-          <FaFacebook /> Facebook
-        </a>
-        <a className="flex items-center gap-2 hover:text-primary">
-          <FaTwitter /> Twitter
-        </a>
-        <a className="flex items-center gap-2 hover:text-primary">
-          <FaInstagram /> Instagram
-        </a>
-      </nav>
+        {/* Contact */}
+        <div>
+          <h6 className="footer-title">Contact</h6>
+          <div className="flex flex-col gap-2 text-sm">
+            <p className="flex items-center gap-2">
+              <FaEnvelope /> support@skillsphere.com
+            </p>
+            <p className="flex items-center gap-2">
+              <FaPhone /> +880 1234-567890
+            </p>
+            <p className="flex items-center gap-2">
+              <FaMapMarkerAlt /> Bangladesh
+            </p>
+          </div>
+        </div>
 
-      {/* Legal */}
-      <nav>
-        <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms & Conditions</a>
-        <a className="link link-hover">Privacy Policy</a>
-      </nav>
+        {/* Social */}
+        <div>
+          <h6 className="footer-title">Social</h6>
+          <div className="flex flex-col gap-2 text-sm">
+            <a className="flex items-center gap-2 hover:text-primary">
+              <FaFacebook /> Facebook
+            </a>
+            <a className="flex items-center gap-2 hover:text-primary">
+              <FaTwitter /> Twitter
+            </a>
+            <a className="flex items-center gap-2 hover:text-primary">
+              <FaInstagram /> Instagram
+            </a>
+          </div>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h6 className="footer-title">Legal</h6>
+          <div className="flex flex-col gap-2 text-sm">
+            <a className="link link-hover">Terms & Conditions</a>
+            <a className="link link-hover">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
+
+      {/* BOTTOM */}
+      <div className="border-t border-base-300 text-center py-4 text-sm text-base-content/60">
+        © {new Date().getFullYear()} SkillSphere. All rights reserved.
+      </div>
 
     </footer>
   );

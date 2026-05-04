@@ -60,7 +60,7 @@ export default function RegisterPage() {
       <Toaster position="top-center" />
       <div className="card w-full max-w-md shadow-2xl bg-base-100">
         <div className="card-body">
-          <h2 className="text-3xl font-bold text-center text-primary mb-2">
+          <h2 className="text-3xl font-bold text-center text-[#25b1fc] mb-2">
             Register
           </h2>
           <p className="text-center text-base-content/60 mb-4">
@@ -87,7 +87,7 @@ export default function RegisterPage() {
 
             <button
               type="submit"
-              className="btn btn-primary w-full"
+              className="btn bg-[#25b1fc] hover:bg-[#1a8bc7] text-white w-full"
               disabled={loading}
             >
               {loading ? (
@@ -115,7 +115,7 @@ export default function RegisterPage() {
 
           <p className="text-center text-sm mt-2">
             Already have an account?{" "}
-            <Link href="/login" className="link link-primary font-medium">
+            <Link href="/login" className="link link-primary font-medium text-[#25b1fc]">
               Login
             </Link>
           </p>
