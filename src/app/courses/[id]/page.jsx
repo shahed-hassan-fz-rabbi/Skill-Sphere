@@ -1,26 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useSession } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { coursedb } from "@/data/coursedb";
 import CourseDetailsCard from "@/components/CourseDetailsCard";
 
 export default function CourseDetailsPage({ params }) {
+  
+  const { id } = use(params);
+  
   const { data: session, isPending } = useSession();
   const router = useRouter();
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
     if (!isPending && !session?.user) {
-      router.push(`/login?redirect=/courses/${params.id}`);
+      router.push(`/login?redirect=/courses/${id}`);
     }
   }, [session, isPending]);
 
   useEffect(() => {
-    const found = coursedb.find((c) => c.id === Number(params.id));
+    const found = coursedb.find((c) => c.id === Number(id));
     setCourse(found);
-  }, [params.id]);
+  }, [id]);
 
   if (isPending) {
     return (
