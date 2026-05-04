@@ -1,48 +1,48 @@
-import Link from "next/link";
-import { coursedb } from "@/data/coursedb";
+"use client";
 
-const CoursesPage = () => {
-  const levelColor = {
-    Beginner: "badge-success",
-    Intermediate: "badge-warning",
-    Advanced: "badge-error",
-  };
+import { useState } from "react";
+import { coursedb } from "@/data/coursedb";
+import CourseCard from "@/components/CourseCard";
+
+export default function CoursesPage() {
+  const [search, setSearch] = useState("");
+
+  const filtered = coursedb.filter((c) =>
+    c.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold mb-6">All Courses</h1>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {coursedb.map((course) => (
-          <div key={course.id} className="card bg-base-100 shadow-md">
-
-            <figure>
-              <img src={course.image} className="h-48 w-full object-cover" />
-            </figure>
-
-            <div className="card-body">
-              <h2 className="card-title">{course.title}</h2>
-              <p>Instructor: {course.instructor}</p>
-              <p>⭐ {course.rating}</p>
-
-              <span className={`badge ${levelColor[course.level]}`}>
-                {course.level}
-              </span>
-
-              <div className="card-actions justify-end mt-4">
-                <Link href={`/courses/${course.id}`}>
-                  <button className="btn btn-primary">
-                    View Details
-                  </button>
-                </Link>
-              </div>
-
-            </div>
-          </div>
-        ))}
+    <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-3">All Courses</h1>
+        <p className="text-base-content/60">
+          Explore our wide range of skill-based courses
+        </p>
       </div>
+
+      {/* Search Bar */}
+      <div className="flex justify-center mb-10">
+        <input
+          type="text"
+          placeholder="🔍 Search courses by title..."
+          className="input input-bordered w-full max-w-lg"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+
+      {/* Course Grid */}
+      {filtered.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center text-xl text-base-content/50 mt-20">
+          No courses found for "{search}"
+        </div>
+      )}
     </div>
   );
-};
-
-export default CoursesPage;
+}

@@ -1,34 +1,48 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSession } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 import { coursedb } from "@/data/coursedb";
+import CourseDetailsCard from "@/components/CourseDetailsCard";
 
-const CourseDetails = async ({ params }) => {
-  const { id } = await params;   // 🔥 IMPORTANT
+export default function CourseDetailsPage({ params }) {
+  const { data: session, isPending } = useSession();
+  const router = useRouter();
+  const [course, setCourse] = useState(null);
 
-  const course = coursedb.find((c) => c.id === Number(id));
+  useEffect(() => {
+    if (!isPending && !session?.user) {
+      router.push(`/login?redirect=/courses/${params.id}`);
+    }
+  }, [session, isPending]);
+
+  useEffect(() => {
+    const found = coursedb.find((c) => c.id === Number(params.id));
+    setCourse(found);
+  }, [params.id]);
+
+  if (isPending) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    );
+  }
+
+  if (!session?.user) return null;
 
   if (!course) {
-    return <p className="p-10">Course not found</p>;
+    return (
+      <div className="text-center mt-20 text-2xl text-error font-semibold">
+        Course not found!
+      </div>
+    );
   }
 
   return (
-    <div className="p-10 max-w-3xl mx-auto">
-
-      <img
-        src={course.image}
-        className="w-full h-64 object-cover rounded-lg mb-6"
-      />
-
-      <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
-
-      <p>Instructor: {course.instructor}</p>
-      <p>Duration: {course.duration}</p>
-      <p>Level: {course.level}</p>
-      <p>Category: {course.category}</p>
-      <p>⭐ {course.rating}</p>
-
-      <p className="mt-4">{course.description}</p>
-
+    <div className="max-w-5xl mx-auto px-4 py-10">
+      <CourseDetailsCard course={course} />
     </div>
   );
-};
-
-export default CourseDetails;
+}
