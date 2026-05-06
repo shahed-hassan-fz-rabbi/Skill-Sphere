@@ -18,14 +18,13 @@ export default function NavBar() {
   return (
     <nav className="navbar bg-base-100 shadow-md px-4 md:px-6 sticky top-0 z-50">
 
-      {/* LEFT */}
       <div className="flex-1">
-        <Link href="/" className="text-xl md:text-2xl font-bold text-[#212121]">
+        <Link href="/" className="text-xl md:text-2xl font-bold text-[#22d2fe]">
           SkillSphere
         </Link>
       </div>
 
-      {/* MOBILE MENU */}
+      
       <div className="dropdown lg:hidden">
         <label tabIndex={0} className="btn btn-ghost">
           ☰
@@ -82,7 +81,7 @@ export default function NavBar() {
       
 
       
-      <div className="hidden lg:flex items-center gap-3">
+      <div className="hidden lg:flex flex-between items-center gap-3 px-2">
 
         <Link href="/" className={linkClass("/")}>
           Home
