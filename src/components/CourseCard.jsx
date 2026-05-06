@@ -12,7 +12,7 @@ export default function CourseCard({ course }) {
         />
       </figure>
       <div className="card-body p-5">
-        <span className="badge badge-primary badge-sm badge-outline w-fit">
+        <span className="badge  badge-sm badge-outline w-fit">
           {course.category}
         </span>
         <h2 className="card-title text-base font-bold line-clamp-2">
@@ -21,7 +21,7 @@ export default function CourseCard({ course }) {
 
         <div className="flex items-center gap-4 text-sm text-base-content/70">
           <div className="flex items-center gap-1">
-            <FaUser className="text-primary text-xs" />
+            <FaUser className="text-[#007bff] text-xs" />
             <span>{course.instructor}</span>
           </div>
           <div className="flex items-center gap-1">
@@ -31,7 +31,7 @@ export default function CourseCard({ course }) {
         </div>
 
         <div className="flex justify-between items-center mt-2">
-          <span className="badge badge-ghost badge-sm">{course.level}</span>
+          <span className="badge badge-outline w-fit badge-sm">{course.level}</span>
           <Link href={`/courses/${course.id}`}>
             <button className="btn bg-[#007bff] hover:bg-[#0056b3] text-white btn-sm">View Details</button>
           </Link>

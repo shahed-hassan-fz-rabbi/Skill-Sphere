@@ -2,7 +2,7 @@ import { coursedb } from "@/data/coursedb";
 import CourseCard from "@/components/CourseCard";
 
 export default function TrendingCourses() {
-  // শেষের ৩টা course trending হিসেবে দেখাবো
+  
   const trending = coursedb.slice(-3);
 
   return (
