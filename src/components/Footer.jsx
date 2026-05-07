@@ -12,11 +12,20 @@ const Footer = () => {
   return (
     <footer className="bg-base-200 text-base-content">
 
-      {/* TOP SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-10 grid gap-8 
-                      sm:grid-cols-2 md:grid-cols-4">
+     
+      <div className="
+          max-w-7xl mx-auto
+          px-4 sm:px-6 lg:px-8
+          py-10
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+          gap-8
+          text-center sm:text-left
+        ">
 
-        {/* Brand */}
+        
         <div>
           <h2 className="text-2xl font-bold text-[#1babf9]">
             SkillSphere
@@ -27,7 +36,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Contact */}
+        
         <div>
           <h6 className="footer-title">Contact</h6>
           <div className="flex flex-col gap-2 text-sm">
@@ -43,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social */}
+        
         <div>
           <h6 className="footer-title">Social</h6>
           <div className="flex flex-col gap-2 text-sm">
@@ -59,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Legal */}
+      
         <div>
           <h6 className="footer-title">Legal</h6>
           <div className="flex flex-col gap-2 text-sm">
@@ -70,7 +79,7 @@ const Footer = () => {
 
       </div>
 
-      {/* BOTTOM */}
+    
       <div className="border-t border-base-300 text-center py-4 text-sm text-base-content/60">
         © {new Date().getFullYear()} SkillSphere. All rights reserved.
       </div>
