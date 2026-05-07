@@ -1,4 +1,5 @@
 "use client";
+
 import { useSession, signOut } from "@/lib/auth-client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -16,23 +17,28 @@ export default function NavBar() {
     }`;
 
   return (
-    <nav className="navbar bg-base-100 shadow-md px-4 md:px-6 sticky top-0 z-50">
+    <nav className="navbar sticky top-0 z-50 bg-base-100/90 backdrop-blur-md shadow-md px-4 md:px-6">
 
+      
       <div className="flex-1">
-        <Link href="/" className="text-xl md:text-2xl font-bold text-[#22d2fe]">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-[#22d2fe]"
+        >
           SkillSphere
         </Link>
       </div>
 
       
-      <div className="dropdown lg:hidden">
-        <label tabIndex={0} className="btn btn-ghost">
+      <div className="dropdown dropdown-end lg:hidden">
+
+        <label tabIndex={0} className="btn btn-ghost btn-circle">
           ☰
         </label>
 
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 right-0"
+          className="menu menu-sm dropdown-content mt-3 z-[100] p-3 shadow-lg bg-base-100 rounded-box w-56 space-y-1"
         >
           <li>
             <Link href="/" className={linkClass("/")}>
@@ -41,28 +47,41 @@ export default function NavBar() {
           </li>
 
           <li>
-            <Link href="/courses" className={linkClass("/courses")}>
+            <Link
+              href="/courses"
+              className={linkClass("/courses")}
+            >
               Courses
             </Link>
           </li>
 
           {user && (
             <li>
-              <Link href="/profile" className={linkClass("/profile")}>
+              <Link
+                href="/profile"
+                className={linkClass("/profile")}
+              >
                 My Profile
               </Link>
             </li>
           )}
 
-          <div className="divider"></div>
+          <div className="divider my-1"></div>
 
           {isPending ? (
-            <span className="loading loading-spinner loading-sm"></span>
+            <div className="flex justify-center py-2">
+              <span className="loading loading-spinner loading-sm"></span>
+            </div>
           ) : user ? (
             <>
-              <li className="px-2 py-1 text-sm">{user.name}</li>
+              <li className="px-2 py-1 text-sm font-medium">
+                {user.name}
+              </li>
+
               <li>
-                <button onClick={() => signOut()}>Logout</button>
+                <button onClick={() => signOut()}>
+                  Logout
+                </button>
               </li>
             </>
           ) : (
@@ -70,6 +89,7 @@ export default function NavBar() {
               <li>
                 <Link href="/login">Login</Link>
               </li>
+
               <li>
                 <Link href="/register">Register</Link>
               </li>
@@ -78,21 +98,25 @@ export default function NavBar() {
         </ul>
       </div>
 
-      
-
-      
-      <div className="hidden lg:flex flex-between items-center gap-3 px-2">
+      {/* Desktop Menu */}
+      <div className="hidden lg:flex items-center gap-3">
 
         <Link href="/" className={linkClass("/")}>
           Home
         </Link>
 
-        <Link href="/courses" className={linkClass("/courses")}>
+        <Link
+          href="/courses"
+          className={linkClass("/courses")}
+        >
           Courses
         </Link>
 
         {user && (
-          <Link href="/profile" className={linkClass("/profile")}>
+          <Link
+            href="/profile"
+            className={linkClass("/profile")}
+          >
             My Profile
           </Link>
         )}
@@ -101,11 +125,15 @@ export default function NavBar() {
           <span className="loading loading-spinner loading-sm"></span>
         ) : user ? (
           <div className="flex items-center gap-3">
+
             <div className="avatar">
-              <div className="w-9 rounded-full ring ring-primary ring-offset-1">
+              <div className="w-10 rounded-full ring ring-primary ring-offset-2">
                 <img
-                  src={user.image || "https://i.pravatar.cc/100"}
-                  alt={user.name}
+                  src={
+                    user.image ||
+                    "https://i.pravatar.cc/100"
+                  }
+                  alt={user?.name || "User"}
                 />
               </div>
             </div>
@@ -119,10 +147,18 @@ export default function NavBar() {
           </div>
         ) : (
           <div className="flex gap-2">
-            <Link href="/login" className="btn btn-sm bg-[#4ca6fa] text-white">
+
+            <Link
+              href="/login"
+              className="btn btn-sm bg-[#4ca6fa] text-white border-none hover:bg-[#3395f7]"
+            >
               Login
             </Link>
-            <Link href="/register" className="btn btn-sm btn-outline">
+
+            <Link
+              href="/register"
+              className="btn btn-sm btn-outline"
+            >
               Register
             </Link>
           </div>

@@ -13,9 +13,7 @@ The goal of this project is to build a course platform using Next.js where users
 
 ---
 
-## 🌐 Live URL
-
-
+## 🌐 Live URL: https://skill-sphere-xi-gules.vercel.app/
 
 
 ---
