@@ -50,9 +50,9 @@ const TopInstructors = () => {
               className="card bg-base-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="card-body items-center text-center p-6">
-                {/* Avatar */}
+                
                 <div className="avatar mb-3">
-                  <div className="w-24 rounded-full ring ring-primary ring-offset-2">
+                  <div className="w-24 rounded-full ring ring-[#007bff] ring-offset-2">
                     <img
                       src={inst.image}
                       alt={inst.name}
@@ -60,7 +60,7 @@ const TopInstructors = () => {
                   </div>
                 </div>
 
-                {/* Badge */}
+               
                 {index === 0 && (
                   <span className="badge badge-warning badge-sm mb-1">
                     🥇 Top Rated
@@ -78,7 +78,7 @@ const TopInstructors = () => {
                   </span>
                 </div>
 
-                {/* Courses Count */}
+               
                 <p className="text-sm text-base-content/60 mt-1">
                   📚 {inst.count} {inst.count === 1 ? "Course" : "Courses"}
                 </p>
